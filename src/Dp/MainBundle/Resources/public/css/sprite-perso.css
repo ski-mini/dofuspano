@@ -1,0 +1,101 @@
+.sprite-perso{
+    background: url("icone/sprite-perso.png") no-repeat;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sprite-perso-feca{
+    width: 68px;
+    height: 68px;
+    background-position: 0 0;
+}
+
+.sprite-perso-sadida{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -68px;
+}
+
+.sprite-perso-sacrieur{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -137px;
+}
+
+.sprite-perso-pandawa{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -206px;
+}
+
+.sprite-perso-roublard{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -275px;
+}
+
+.sprite-perso-zobal{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -344px;
+}
+
+.sprite-perso-steamer{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -412px;
+}
+
+.sprite-perso-osamodas{
+    width: 68px;
+    height: 68px;
+    background-position:0 -481px;
+}
+
+.sprite-perso-enutrof{
+    width: 68px;
+    height: 68px;
+    background-position:0 -550px;
+}
+
+.sprite-perso-sram{
+    width: 68px;
+    height: 68px;
+    background-position:0 -619px;
+}
+
+.sprite-perso-xelor{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -687px;
+}
+
+.sprite-perso-eca{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -757px;
+}
+
+.sprite-perso-eniripsa{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -826px;
+}
+
+.sprite-perso-iop{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -894px;
+}
+
+.sprite-perso-cra{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -963px;
+}
+
+.sprite-perso-eliotrope{
+    width: 68px;
+    height: 68px;
+    background-position: 0 -1032px;
+}

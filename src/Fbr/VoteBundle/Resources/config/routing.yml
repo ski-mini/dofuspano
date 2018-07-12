@@ -1,0 +1,8 @@
+vote_vote:
+    path:     /vote
+    defaults: { _controller: FbrVoteBundle:Vote:vote }
+    condition: "request.isXmlHttpRequest()"
+    options:
+        expose: true
+    requirements:
+        _method:  POST

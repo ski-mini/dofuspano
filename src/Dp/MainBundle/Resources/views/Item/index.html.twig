@@ -1,0 +1,18 @@
+{% extends 'DpMainBundle::layout.html.twig' %}
+
+{% block header %}
+    Dofus Pano
+{% endblock %}
+
+{% block content %}    
+
+    {{ item.name }} - {{ item.itemtype.name }} - Niveau {{item.lvl}}<br>
+    <img src="{{ asset(['bundles/dp/cdn/img/item/', item.id, '.png']|join) }}" alt="{{ item.name }} image not found" class="img-responsive" />
+    <br/>
+    {% for effect in item.effects %}
+        {% if effect.valuemin == effect.valuemax %}{{ effect.valuemin }}{% else %}{{ effect.valuemin }} à {{ effect.valuemax }}{% endif %}  {{ effect.effecttype.name }}<br>
+    {% endfor %}
+    <br/>
+    {% if item.panoply.name is defined and item.panoply.name is not empty %}Panoplie : {{ item.panoply.name }}{% endif %}
+    <br />
+{% endblock %}

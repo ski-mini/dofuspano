@@ -1,0 +1,36 @@
+{% extends 'DpMainBundle::layout.html.twig' %}
+
+{% block header %}
+    Dofus Pano
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <section class="col-md-9">
+    {% for r in retour %}
+    <article>
+      <figure>SRAM</figure>
+      <h2>{{ r.infos.name }}</h2>
+      <h3>de {{ r.infos.user.username }}</h3>
+      <h3>{{ r.infos.keyword }}</h3>
+      <p>
+        <span>Il y a 1 mois - 154 200 vues</span>
+        {{ r.infos.description }}
+      </p>
+    </article>
+  {% endfor %}
+  {{ dump(retour) }}
+  <br/> keyword :
+  {{ dump(keyword) }}
+  <br/> classe :
+  {{ dump(classe) }}
+  <br> user :
+  {{ dump(user) }}
+  </section>
+
+  <aside class="col-md-3">
+
+  </aside>
+</div>
+
+{% endblock %}

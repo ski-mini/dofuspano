@@ -1,0 +1,69 @@
+{% extends 'DpMainBundle::layout.html.twig' %}
+{% trans_default_domain 'DpMainBundle' %}
+
+{% block content %}
+
+{% if app.user is defined and app.user is not empty and (app.user.id == stuff.user.id) %}
+
+{% endif %}
+
+{% for message in app.session.flashbag.get('success') %}
+<div class="alert alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  {{ message }}
+</div>
+{% endfor %}
+{% for message in app.session.flashbag.get('error') %}
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Attention !</strong>{{ message }}
+</div>
+{% endfor %}
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#stuff" aria-controls="stuff" role="tab" data-toggle="tab">Equipement</a></li>
+    <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a></li>
+    <li role="presentation"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">Détail des caractéristiques</a></li>
+    <li role="presentation"><a href="#damage" aria-controls="damage" role="tab" data-toggle="tab">Dégâts</a></li>
+    {% if stuffIsMine %}
+      <li role="presentation"><a href="#controlpanel" aria-controls="controlpanel" role="tab" data-toggle="tab">Modifier</a></li>
+    {% endif %}
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <section role="tabpanel" class="tab-pane active" id="stuff">
+        {{ include('DpMainBundle:Stuff:stuff.html.twig') }}
+    </section>
+    <section role="tabpanel" class="tab-pane row" id="description">
+        {{ include('DpMainBundle:Stuff:description.html.twig') }}
+    </section>
+    <section role="tabpanel" class="tab-pane row" id="detail">
+        {{ include('DpMainBundle:Stuff:details.html.twig') }}
+    </section>
+    <section role="tabpanel" class="tab-pane row" id="damage">
+        {{ include('DpMainBundle:Stuff:damages.html.twig') }}
+    </section>
+    {% if stuffIsMine %}
+      <section role="tabpanel" class="tab-pane row" id="controlpanel">
+        {{ include('DpMainBundle:Stuff:controlPanel.html.twig') }}
+      </section>
+    {% endif %}
+  </div>
+
+</div>
+
+{% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': 'voirStuff-' ~ stuff.id } %}
+
+<section>
+    {% for sd in stuff.stuffdetails %}
+        {% if sd.item is defined %}
+            {{ include('DpMainBundle:Stuff:detailItem.html.twig', {'item': sd.item, 'overtype': sd.overtype}) }}
+        {% endif %}
+    {% endfor %}
+</section>
+
+{% endblock %}

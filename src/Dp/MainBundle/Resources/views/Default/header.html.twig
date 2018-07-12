@@ -1,0 +1,118 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <div class="logo">
+        <a href="{{ path('DpMainBundle_homepage') }}" >
+          <img src="{{ asset('bundles/dpmain/images/logo/logo.png') }}" style="width:55px;padding-right:6px;" alt="logo" />
+          <span class="shape">Dofuspano</span>
+        </a>
+      </div>
+    </div>
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+      {% render(controller("DpUserBundle:Security:tbAuthenticated")) %}
+    {% else %}
+      {% render(controller("DpUserBundle:Security:tbLogin")) %}
+    {% endif %}
+  </div>
+</div>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+
+    <div class="form-group has-feedback has-feedback-left search">
+      <div class="input-group">
+        <i class="fa fa-search form-control-feedback"></i>
+        <input type="text" style="position:static;" class="form-control" id="search" placeholder="Rechercher" />
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div>
+    </div>
+    <section class="row visible-sm visible-md visible-lg center">
+      <div class="col-sm-6 col-lg-3 nopadding">
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="2" class="searchClasse sprite-perso-feca sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="1" class="searchClasse sprite-perso-osamodas sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="3" class="searchClasse sprite-perso-enutrof sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="4" class="searchClasse sprite-perso-sram sprite-perso"></span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 nopadding">
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="5" class="searchClasse sprite-perso-xelor sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="6" class="searchClasse sprite-perso-eca sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="7" class="searchClasse sprite-perso-eniripsa sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="8" class="searchClasse sprite-perso-iop sprite-perso"></span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 nopadding">
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="9" class="searchClasse sprite-perso-cra sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="10" class="searchClasse sprite-perso-sadida sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="11" class="searchClasse sprite-perso-sacrieur sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="16" class="searchClasse sprite-perso-pandawa sprite-perso"></span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 nopadding">
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="12" class="searchClasse sprite-perso-roublard sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="13" class="searchClasse sprite-perso-zobal sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="14" class="searchClasse sprite-perso-steamer sprite-perso"></span>
+        </div>
+        <div class="col-sm-3 col-lg-3 nopadding">
+          <span data-value="15" class="searchClasse sprite-perso-eliotrope sprite-perso"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="row visible-xs center">
+      <div class="col-xs-6 nopadding">
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-feca sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-osamodas sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-enutrof sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-sram sprite-perso-miniature"></span></div>
+      </div>
+      <div class="col-xs-6 nopadding">
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-xelor sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-eca sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-eniripsa sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-iop sprite-perso-miniature"></span></div>
+      </div>
+      <div class="col-xs-6 nopadding">
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-cra sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-sadida sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-sacrieur sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-pandawa sprite-perso-miniature"></span></div>
+      </div>
+      <div class="col-xs-6 nopadding">
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-roublard sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-zobal sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-steamer sprite-perso-miniature"></span></div>
+        <div class="col-xs-3 nopadding"><span class="sprite-perso-miniature-eliotrope sprite-perso-miniature"></span></div>
+      </div>
+    </section>
+  </div>
+</div>

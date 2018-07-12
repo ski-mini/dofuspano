@@ -1,0 +1,21 @@
+parameters:
+#    dp_main.example.class: Dp\MainBundle\Example
+
+services:
+    dp_main.import.dofusbook:
+        class: Dp\MainBundle\Services\Import\Dofusbook
+        calls:
+         - [setEntityManager, ["@doctrine.orm.entity_manager"]]
+        arguments:
+         - @security.context
+         - @dp_main.twig.dp_extension
+    dp_main.calcul.stuff:
+        class: Dp\MainBundle\Services\Calcul\Stuff
+        calls:
+         - [setEntityManager, ["@doctrine.orm.entity_manager"]]
+        arguments:
+         - @security.context
+    dp_main.twig.dp_extension:
+        class: Dp\MainBundle\Services\Twig\DpExtension
+        tags:
+            - { name: twig.extension }

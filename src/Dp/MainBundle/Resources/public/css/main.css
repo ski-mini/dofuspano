@@ -1,0 +1,123 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* custom classe */
+
+.nopadding {
+  padding:0;
+}
+
+.center, .center * {
+  text-align: center;
+}
+
+/* surcharge bootstrap */
+
+.jumbotron {
+  padding: 25px 0;
+}
+
+.highlight {
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    margin:25px;
+    padding: 14px;
+}
+
+/* Side notes for calling out things
+-------------------------------------------------- */
+
+/* Base styles (regardless of theme) */
+.bs-callout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.bs-callout h4 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+
+/* Themes for different contexts */
+
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout h4 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.bs-content {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 45px 15px 15px;
+}
+
+/* les glyphicons à gauche
+* Voir : http://jsfiddle.net/KyleMit/eSt3s/
+*/
+
+.fa.form-control-feedback {
+    line-height: 34px; /* @input-height-base; */
+}
+.input-sm ~ .fa.form-control-feedback {
+    line-height: 30px; /* @input-height-base; */
+}
+.input-lg ~ .fa.form-control-feedback {
+    line-height: 46px; /* @input-height-base; */
+}
+
+
+
+
+
+.has-feedback-left input.form-control {
+    padding-left: 34px; /* @input-height-base; */
+    padding-right: 12px; /* @padding-base-horizontal */
+}
+
+.has-feedback-left .form-control-feedback {
+    left: 0;
+}
+.form-horizontal .has-feedback-left .form-control-feedback {
+    left: 12px; /* @grid-gutter-width / 2 */
+}
+
+.has-feedback-left input.input-sm {
+  padding-left: 30px;  @input-height-small;
+}
+.has-feedback-left input.input-lg {
+  padding-left: 46px;  @input-height-large;
+}
+

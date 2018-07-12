@@ -1,0 +1,69 @@
+.logo {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.logo *{
+    display: inline-block;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.logo span {
+    font-family: 'Irish Grover', cursive;
+    font-size: 40px;
+    text-align: left;
+    color: #F5F5F5;
+    overflow: hidden;
+    width: 230px;
+    height: 50px;
+}
+
+.logo img {
+    vertical-align: top;
+}
+
+.navbar-inverse{
+    background-color:#3a3a3a;
+}
+
+.shape {
+    text-shadow: rgb(29, 29, 29) 1px 1px,
+    rgb(29, 29, 29) 2px 2px,
+    rgb(29, 29, 29) 3px 3px,
+    rgb(29, 29, 29) 4px 4px,
+    rgb(29, 29, 29) 5px 5px,
+    rgb(29, 29, 29) 6px 6px,
+    rgb(29, 29, 29) 7px 7px,
+    rgb(30, 30, 30) 8px 8px,
+    rgb(30, 30, 30) 9px 9px,
+    rgb(30, 30, 30) 10px 10px,
+    rgb(30, 30, 30) 11px 11px,
+    rgb(30, 30, 30) 12px 12px,
+    rgb(30, 30, 30) 13px 13px,
+    rgb(31, 31, 31) 14px 14px,
+    rgb(31, 31, 31) 15px 15px,
+    rgb(31, 31, 31) 16px 16px,
+    rgb(31, 31, 31) 17px 17px,
+    rgb(31, 31, 31) 18px 18px,
+    rgb(31, 31, 31) 19px 19px,
+    rgb(31, 31, 31) 20px 20px,
+    rgb(32, 32, 32) 21px 21px,
+    rgb(32, 32, 32) 22px 22px,
+    rgb(32, 32, 32) 23px 23px,
+    rgb(32, 32, 32) 24px 24px,
+    rgb(32, 32, 32) 25px 25px,
+    rgb(32, 32, 32) 26px 26px,
+    rgb(33, 33, 33) 27px 27px,
+    rgb(33, 33, 33) 28px 28px,
+    rgb(33, 33, 33) 29px 29px,
+    rgb(33, 33, 33) 30px 30px,
+    rgb(33, 33, 33) 31px 31px,
+    rgb(33, 33, 33) 32px 32px,
+    rgb(34, 34, 34) 33px 33px;
+}

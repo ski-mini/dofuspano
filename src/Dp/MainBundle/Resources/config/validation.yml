@@ -1,0 +1,4 @@
+Dp\MainBundle\Entity\FormImport:
+    properties:
+        url:
+            - NotBlank: ~

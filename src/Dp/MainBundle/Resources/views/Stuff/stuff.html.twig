@@ -1,0 +1,200 @@
+<div class="row">
+    <div class="col-sm-9">
+        <h1>{{ stuff.name }} - {{ stuff.classe.name }}, Niveau {{ stuff.lvl }}</h1>
+        <h2>{{ stuff.keyword }}</h2>
+    </div>
+    <div class="col-sm-3">
+        {{ include('FbrVoteBundle:Vote:default.html.twig', {'id': stuff.id, 'element': 'Stuff', 'vote': vote}) }}
+
+    </div>
+</div>
+<div class="row">
+    <div class="stuff jumbotron col-sm-8">
+        <div class="col-sm-2">
+            {% set i = "" %}
+            {% for sd in stuff.stuffdetails %}
+                {% if sd.item.itemtype.itemglobaltype.id is defined and sd.item.itemtype.itemglobaltype.id is not empty and sd.item.itemtype.itemglobaltype.id == 4 %}
+                    <div class='cdr-small'>
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-small" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" />
+                    </div>
+                    {% set i=i+1 %}
+                {% endif %}
+                {% if loop.last and i < 6 %}
+                    {% for i in i..5 %}
+                        <div class='cdr-small'></div>
+                        {% set i=i+1 %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="col-sm-2">
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 1 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 4 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 2 and anneau is not defined %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                        {% set anneau = 1 %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 6 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 3 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <img src="{{ asset(['bundles/dpmain/images/perso/', stuff.classe.name|slugify ~ '-femme', '.png']|join) }}" alt="{{ stuff.classe.name|slugify }} femme image not found" class="" />
+        </div>
+
+        <div class="col-sm-3">
+            <img src="{{ asset(['bundles/dpmain/images/perso/', stuff.classe.name|slugify ~ '-homme', '.png']|join) }}" alt="{{ stuff.classe.name|slugify }} homme image not found" class="" />
+        </div>
+
+        <div class="col-sm-2">
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 7 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item.itemtype.itemglobaltype.id is defined and sd.item.itemtype.itemglobaltype.id is not empty and sd.item.itemtype.itemglobaltype.id == 2 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 2 %}
+                        {% if anneau is defined and anneau == 2 %}
+                            <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                        {% else %}
+                            {% set anneau = 2 %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item is defined and sd.item is not empty and sd.item.itemtype.id == 5 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium item-{{ sd.item.itemtype.id }}-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class='cdr-medium'>
+                {% for sd in stuff.stuffdetails %}
+                    {% if sd.item.itemtype.itemglobaltype is defined and sd.item.itemtype.itemglobaltype is not empty and sd.item.itemtype.itemglobaltype.id == 3 %}
+                        <img src="{{ asset(['bundles/dpmain/images/item/', sd.item.id, '.png']|join) }}" alt="{{ sd.item.name }} image not found" class="img-responsive img-item-medium ride-place" data-toggle="modal" data-target="#modal-item{{ sd.item.id }}" /><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron col-sm-4">
+        <h3>Caractéristiques</h3>
+        <ul class="characteristicList">
+            <li class="" title="Minimum {{ totalCharacteristics.Vitalité.min|default(0) }} PV">
+                <span class="sprite-carac sprite-vitalite"></span>
+                <span class="characteristicTitle">Points de vie</span>
+                <span class="characteristic">{{ totalCharacteristics.Vitalité.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.PA.min|default(0) }} PA">
+                <span class="sprite-carac sprite-pa"></span>
+                <span class="characteristicTitle">PA</span>
+                <span class="characteristic">{{ totalCharacteristics.PA.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.PM.min|default(0) }} PM">
+                <span class="sprite-carac sprite-pm"></span>
+                <span class="characteristicTitle">PM</span>
+                <span class="characteristic">{{ totalCharacteristics.PM.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.PO.min|default(0) }} PO">
+                <span class="sprite-carac sprite-po"></span>
+                <span class="characteristicTitle">PO</span>
+                <span class="characteristic">{{ totalCharacteristics.PO.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics['Coups Critiques']['min']|default(0) }} CC">
+                <span class="sprite-carac sprite-cc"></span>
+                <span class="characteristicTitle">Coups Critiques</span>
+                <span class="characteristic">{{ totalCharacteristics['Coups Critiques']['max']|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Initiative.min|default(0) }} Ini">
+                <span class="sprite-carac sprite-initiative"></span>
+                <span class="characteristicTitle">Initiative</span>
+                <span class="characteristic">{{ totalCharacteristics.Initiative.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Prospection.min|default(0) }} PP">
+                <span class="sprite-carac sprite-prospection"></span>
+                <span class="characteristicTitle">Prospection</span>
+                <span class="characteristic">{{ totalCharacteristics.Prospection.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Invocations.min|default(0) }} CI">
+                <span class="sprite-carac sprite-invocations"></span>
+                <span class="characteristicTitle">Invocations</span>
+                <span class="characteristic">{{ totalCharacteristics.Invocations.max|default(0) }}</span>
+            </li>
+        </ul>
+
+        <ul class="characteristicList">
+            <li class="" title="Minimum {{ totalCharacteristics.Sagesse.min|default(0) }} Sa">
+                <span class="sprite-carac sprite-sagesse"></span>
+                <span class="characteristicTitle">Sagesse</span>
+                <span class="characteristic">{{ totalCharacteristics.Sagesse.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Force.min|default(0) }} Fo">
+                <span class="sprite-carac sprite-force"></span>
+                <span class="characteristicTitle">Force</span>
+                <span class="characteristic">{{ totalCharacteristics.Force.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Intelligence.min|default(0) }} Int">
+                <span class="sprite-carac sprite-intelligence"></span>
+                <span class="characteristicTitle">Intelligence</span>
+                <span class="characteristic">{{ totalCharacteristics.Intelligence.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Chance.min|default(0) }} Cha">
+                <span class="sprite-carac sprite-chance"></span>
+                <span class="characteristicTitle">Chance</span>
+                <span class="characteristic">{{ totalCharacteristics.Chance.max|default(0) }}</span>
+            </li>
+            <li class="" title="Minimum {{ totalCharacteristics.Agilité.min|default(0) }} Agi">
+                <span class="sprite-carac sprite-agilite"></span>
+                <span class="characteristicTitle">Agilité</span>
+                <span class="characteristic">{{ totalCharacteristics.Agilité.max|default(0) }}</span>
+            </li>
+        </ul>
+    </div>
+</div>

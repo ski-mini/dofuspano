@@ -1,0 +1,14 @@
+{% extends 'DpMainBundle::layout.html.twig' %}
+
+{% block header %}
+    Dofus Pano
+{% endblock %}
+
+{% block content %}
+
+    {% for e in equipmentListe %}
+        <a href="{{ path('DpMainBundle_item', { 'name': e.name|slugify, 'id': e.id }) }}">
+            {{e.name}}
+        </a><br />
+    {% endfor %}
+{% endblock %}

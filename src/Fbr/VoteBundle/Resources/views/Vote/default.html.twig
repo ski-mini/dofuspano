@@ -1,0 +1,8 @@
+<aside class="vote">
+    <button type="button" class="btn btn-default {% if vote == '1' %}alert-info"{% else %}FbrVote"{% endif %} data-value="1" data-element="{{ element }}" data-id="{{ id }}" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+    </button>
+    <button type="button" class="btn btn-default {% if vote == '0' %}alert-danger"{% else %}FbrVote"{% endif %} data-value="0" data-element="{{ element }}" data-id="{{ id }}" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+    </button>
+</aside>

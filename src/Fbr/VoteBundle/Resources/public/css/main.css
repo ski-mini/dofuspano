@@ -1,0 +1,11 @@
+.alert-info:hover, .alert-info[disabled], .alert-info:focus {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.alert-danger:hover, .alert-danger[disabled], .alert-danger:focus {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}

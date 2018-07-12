@@ -1,0 +1,69 @@
+fos_elastica:
+    clients:
+        default: { host: * }
+    indexes:
+        dp_globalsearch:
+            client: default
+            settings:
+                index:
+                  analysis:
+                    analyzer:
+                      default :
+                        type     :    custom
+                        tokenizer:    nGram
+                        filter   :    ["stopwords", "asciifolding", "lowercase", "french_stem","snowball", "elision", "worddelimiter"]
+                    tokenizer:
+                      nGram:
+                        type:     nGram
+                        min_gram: 3
+                        max_gram: 20
+                    filter:
+                      snowball:
+                        type:     snowball
+                        language: French
+                      elision:
+                        type:     elision
+                        articles: ["l", "m", "t", "qu", "n", "s", "j", "d"]
+                      stopwords:
+                        type:      stop
+                        stopwords: [_french_]
+                        ignore_case : true
+                      worddelimiter :
+                        type:      word_delimiter
+            types:
+                Stuff:
+                    mappings:
+                        name: ~
+                        description: ~
+                        keyword: ~
+                        lvl: ~
+                        enable: ~
+                        online: ~
+                        user:
+                            type: object
+                            properties:
+                                username: ~
+                        classe:
+                            type: object
+                            properties:
+                                classe_id:
+                                    property_path: id
+                                    type: integer
+                                classe_name:
+                                    property_path: name
+                    persistence:
+                        driver: orm
+                        model:  Dp\MainBundle\Entity\Stuff
+                        finder: ~
+                        provider: ~
+                        listener: ~
+                Comment:
+                    mappings:
+                        body: ~
+                    persistence:
+                        driver: orm
+                        model:  Dp\CommentBundle\Entity\Comment
+                        finder: ~
+                        provider: ~
+                        listener: ~
+            finder: ~

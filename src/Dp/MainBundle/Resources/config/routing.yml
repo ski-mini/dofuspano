@@ -1,0 +1,59 @@
+DpMainBundle_homepage:
+    pattern:  /
+    defaults: { _controller: DpMainBundle:Default:index }
+    requirements:
+        _method:  GET
+
+DpMainBundle_globalsearch:
+    pattern:  /search/global
+    defaults: { _controller: DpMainBundle:Default:globalsearch }
+    options:
+        expose: true
+    requirements:
+        _method:  POST
+
+DpMainBundle_listeitem:
+    pattern:  /liste-{type}/{minlvl}-{maxlvl}
+    defaults: { _controller: DpMainBundle:Item:liste, minlvl: 1, maxlvl: 200 }
+    requirements:
+        _method:  GET
+        min: \d{1,3}
+        max: \d{1,3}
+
+DpMainBundle_item:
+    pattern:  /encyclopedie/{id}/{name}
+    defaults: { _controller: DpMainBundle:Item:index }
+    requirements:
+        _method:  GET
+        id: \d+
+
+DpMainBundle_stuff:
+    pattern:  /personnage/equipement/
+    defaults: { _controller: DpMainBundle:Stuff:index }
+    requirements:
+        _method:  GET|POST
+
+DpMainBundle_stuff_voir:
+    pattern:  /personnage/equipement/{user}/{stuffId}
+    defaults: { _controller: DpMainBundle:Stuff:voir }
+    options:
+        expose: true
+    requirements:
+        _method:  GET
+        stuffId: \d{1,8}
+
+DpMainBundle_stuff_modifier:
+    pattern:  /personnage/equipement/{user}/{stuffId}
+    defaults: { _controller: DpMainBundle:Stuff:modifier }
+    requirements:
+        _method:  GET|POST
+        stuffId: \d{1,8}
+
+DpMainBundle_advanced_search:
+    pattern:  /recherche
+    defaults: { _controller: DpMainBundle:AdvancedSearch:index }
+    options:
+        expose: true
+    requirements:
+        _method:  GET
+        c: \d{1,8}

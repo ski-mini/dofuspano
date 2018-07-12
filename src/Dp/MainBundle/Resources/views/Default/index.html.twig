@@ -1,0 +1,58 @@
+{% extends 'DpMainBundle::layout.html.twig' %}
+
+{% block header %}
+    Dofus Pano
+{% endblock %}
+
+{% block content %}
+
+  {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    {% render(controller("DpMainBundle:User:controlPanel")) %}
+  {% endif %}
+
+  <section class="row">
+    <article class="col-md-4">
+      <h2>Derniers ajouts</h2>
+      <ul>
+        {% for stuff in lastStuffList %}
+          <li>
+            <a href="{{ path('DpMainBundle_stuff_voir', {'user': stuff.user.username, 'stuffId': stuff.id }) }}">{{ stuff.name }}</a> - {{ stuff.created|ago }}
+          </li>
+        {% endfor %}
+      </ul>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </article>
+    <article class="col-md-4">
+      <h2>Mieux notés</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </article>
+    <article class="col-md-4">
+      <h2>Plus populaires</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </article>
+  </section>
+  <section class="row">
+    <article class="col-md-4">
+      <h2>Type de stuff</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </article>
+    <article class="col-md-4">
+      <h2>Niveau</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </article>
+    <article class="col-md-4">
+      <h2>Top membres</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </article>
+  </section>
+
+  <a href="{{ path('DpMainBundle_stuff') }}">Ajouter un stuff</a>
+  <br/>
+  <br/>
+
+{% endblock %}

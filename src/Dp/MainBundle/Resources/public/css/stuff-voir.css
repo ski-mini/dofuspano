@@ -1,0 +1,54 @@
+.characteristicList{
+    list-style: none;
+    padding: 0;
+}
+
+.characteristicList li span{
+    display: inline-block;
+    line-height: 25px;
+}
+
+.characteristicTitle{
+    width: 50%;
+}
+
+.characteristic{
+    text-align: right;
+    width: 20%;
+}
+
+.img-item-medium {
+    width: 70px;
+    height: 70px;
+}
+
+.img-item-small {
+    width: 55px;
+    height: 55px;
+}
+
+.stuff {
+    margin:0 auto;
+}
+
+.cdr-medium {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #C1BFB1;
+    background-color: white;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.cdr-small {
+    width: 57px;
+    height: 57px;
+    border: 1px solid #C1BFB1;
+    background-color: white;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.cdr-small img, .cdr-medium img{
+    cursor: pointer;
+}

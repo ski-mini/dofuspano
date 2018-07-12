@@ -1,0 +1,12 @@
+parameters:
+    dp.comments.vote_persistence_listener.class: Dp\CommentBundle\EventListener\CommentVotePersistenceListener
+
+services:
+    dp.comment.acl.comment.roles:
+        class: Dp\CommentBundle\Acl\RoleCommentAcl
+        arguments: [@security.context, "IS_AUTHENTICATED_FULLY", "IS_AUTHENTICATED_ANONYMOUSLY", "ROLE_ADMIN", "ROLE_ADMIN", %fos_comment.model.comment.class%]
+    dp.comments.vote_persistence_listener:
+        class: %dp.comments.vote_persistence_listener.class%
+        arguments: [ @fos_comment.manager.vote.default, @security.context ]
+        tags:
+            - { name: kernel.event_subscriber }

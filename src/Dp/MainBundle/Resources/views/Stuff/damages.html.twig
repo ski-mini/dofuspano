@@ -1,0 +1,118 @@
+<div class="stuff jumbotron col-sm-4">
+{% for spell in spells %}
+    <img src="{{ asset(['bundles/dpmain/images/spell/', spell.id, '.png']|join) }}" alt="{{ spell.name }} image not found" class="img-responsive" /><br>
+    {{ spell.name }}<br>
+    {{ spell.description }}
+    <br><br>
+    {% for sc in spell.spellcharacteristics %}
+        Niveau {{ sc.lvl }} {% if sc.pa != null %} PA : {{ sc.pa }} {% endif %} {% if sc.po != null %} PO : {{ sc.po }} {% endif %} {% if sc.cc != null %} CC : 1/{{ sc.cc }} {% endif %} {% if sc.relaunch != null %} Relance : {{ sc.relaunch }} {% endif %} {% if sc.zone != null %} Zone : {{ sc.zone }} {% endif %} {% if sc.castbytarget != null %} Lancer par cible : {{ sc.castbytarget }} {% endif %} {% if sc.castbyturn != null %} Lancer par tour : {{ sc.castbyturn }} {% endif %} {% if sc.straightlineonly != null %} Lancer en ligne : {% if sc.straightlineonly == 1 %} Oui {% else %} Non {% endif %} {% endif %} {% if sc.lineofsight != null %} Ligne de vue : {% if sc.lineofsight == 1 %} Oui {% else %} Non {% endif %} {% endif %} {% if sc.modifiablerange != null %} Po modifiable : {% if sc.modifiablerange == 1 %} Oui {% else %} Non {% endif %} {% endif %} {% if sc.accumulationbytarget != null %} Accumulation par cible : {{ sc.accumulationbytarget }} {% endif %}
+        <br /><br />
+    {% endfor %}
+    <br><br>
+
+    Niveau 1 : <br>
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 1 %}
+            {{ sd.specification }} {% if sd.dmgmin == sd.dmgmax %}{{ sd.dmgmin }}{% else %}{{ sd.dmgmin }} à {{ sd.dmgmax }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    CC
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 1 %}
+            {% if sd.dmgmincc != null %}
+                {{ sd.specification }} {% if sd.dmgmincc == sd.dmgmaxcc %}{{ sd.dmgmincc }}{% else %}{{ sd.dmgmincc }} à {{ sd.dmgmaxcc }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            {% endif %}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br>
+
+    Niveau 2 : <br>
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 2 %}
+            {{ sd.specification }} {% if sd.dmgmin == sd.dmgmax %}{{ sd.dmgmin }}{% else %}{{ sd.dmgmin }} à {{ sd.dmgmax }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    CC
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 2 %}
+            {% if sd.dmgmincc != null %}
+                {{ sd.specification }} {% if sd.dmgmincc == sd.dmgmaxcc %}{{ sd.dmgmincc }}{% else %}{{ sd.dmgmincc }} à {{ sd.dmgmaxcc }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            {% endif %}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br>
+
+    Niveau 3 : <br>
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 3 %}
+            {{ sd.specification }} {% if sd.dmgmin == sd.dmgmax %}{{ sd.dmgmin }}{% else %}{{ sd.dmgmin }} à {{ sd.dmgmax }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    CC
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 3 %}
+            {% if sd.dmgmincc != null %}
+                {{ sd.specification }} {% if sd.dmgmincc == sd.dmgmaxcc %}{{ sd.dmgmincc }}{% else %}{{ sd.dmgmincc }} à {{ sd.dmgmaxcc }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            {% endif %}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br>
+
+    Niveau 4 : <br>
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 4 %}
+            {{ sd.specification }} {% if sd.dmgmin == sd.dmgmax %}{{ sd.dmgmin }}{% else %}{{ sd.dmgmin }} à {{ sd.dmgmax }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    CC
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 4 %}
+            {% if sd.dmgmincc != null %}
+                {{ sd.specification }} {% if sd.dmgmincc == sd.dmgmaxcc %}{{ sd.dmgmincc }}{% else %}{{ sd.dmgmincc }} à {{ sd.dmgmaxcc }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            {% endif %}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br>
+
+    Niveau 5 : <br>
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 5 %}
+            {{ sd.specification }} {% if sd.dmgmin == sd.dmgmax %}{{ sd.dmgmin }}{% else %}{{ sd.dmgmin }} à {{ sd.dmgmax }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    CC
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 5 %}
+            {% if sd.dmgmincc != null %}
+                {{ sd.specification }} {% if sd.dmgmincc == sd.dmgmaxcc %}{{ sd.dmgmincc }}{% else %}{{ sd.dmgmincc }} à {{ sd.dmgmaxcc }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            {% endif %}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br>
+
+    Niveau 6 : <br>
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 6 %}
+            {{ sd.specification }} {% if sd.dmgmin == sd.dmgmax %}{{ sd.dmgmin }}{% else %}{{ sd.dmgmin }} à {{ sd.dmgmax }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    CC
+    {% for sd in spell.spelldamages %}
+        {% if sd.lvl  == 6 %}
+            {% if sd.dmgmincc != null %}
+                {{ sd.specification }} {% if sd.dmgmincc == sd.dmgmaxcc %}{{ sd.dmgmincc }}{% else %}{{ sd.dmgmincc }} à {{ sd.dmgmaxcc }}{% endif %}  {{ sd.damagetype.name }} {% if sd.comment != null %}({{ sd.comment }}){% endif %}
+            {% endif %}<br>
+        {% endif %}
+    {% endfor %}
+    <br><br>
+{% endfor %}
+</div>
+<div class="stuff jumbotron col-sm-8">
+
+</div>

@@ -1,0 +1,100 @@
+.sprite-perso-miniature{
+    background: url("icone/sprite-perso-miniature.jpg") no-repeat;
+    display: inline-block;
+}
+
+.sprite-perso-miniature-feca{
+    width: 35px;
+    height: 35px;
+    background-position: 0 0;
+}
+
+.sprite-perso-miniature-osamodas{
+    width: 35px;
+    height: 35px;
+    background-position: -35px 0;
+}
+
+.sprite-perso-miniature-enutrof{
+    width: 35px;
+    height: 35px;
+    background-position: -70px 0;
+}
+
+.sprite-perso-miniature-sram{
+    width: 35px;
+    height: 35px;
+    background-position: -105px 0;
+}
+
+.sprite-perso-miniature-xelor{
+    width: 35px;
+    height: 35px;
+    background-position: -140px 0;
+}
+
+.sprite-perso-miniature-eca{
+    width: 35px;
+    height: 35px;
+    background-position: -175px 0;
+}
+
+.sprite-perso-miniature-eniripsa{
+    width: 35px;
+    height: 35px;
+    background-position: -210px 0;
+}
+
+.sprite-perso-miniature-iop{
+    width: 35px;
+    height: 35px;
+    background-position: -245px 0;
+}
+
+.sprite-perso-miniature-cra{
+    width: 35px;
+    height: 35px;
+    background-position: -280px 0;
+}
+
+.sprite-perso-miniature-sadida{
+    width: 35px;
+    height: 35px;
+    background-position: -315px 0;
+}
+
+.sprite-perso-miniature-sacrieur{
+    width: 35px;
+    height: 35px;
+    background-position: -350px 0;
+}
+
+.sprite-perso-miniature-pandawa{
+    width: 35px;
+    height: 35px;
+    background-position: -385px 0;
+}
+
+.sprite-perso-miniature-roublard{
+    width: 35px;
+    height: 35px;
+    background-position: -420px 0;
+}
+
+.sprite-perso-miniature-zobal{
+    width: 35px;
+    height: 35px;
+    background-position: -455px 0;
+}
+
+.sprite-perso-miniature-steamer{
+    width: 35px;
+    height: 35px;
+    background-position: -490px 0;
+}
+
+.sprite-perso-miniature-eliotrope{
+    width: 35px;
+    height: 35px;
+    background-position: -525px 0;
+}

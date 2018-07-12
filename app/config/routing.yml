@@ -1,0 +1,24 @@
+comment:
+    resource: "@DpCommentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dp_user:
+    resource: "@DpUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dp_main:
+    resource: "@DpMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fbr_vote:
+    resource: "@FbrVoteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_comment_api:
+    type: rest
+    resource: "@FOSCommentBundle/Resources/config/routing.yml"
+    prefix: /api
+    defaults: { _format: html }
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

@@ -1,0 +1,15 @@
+# Import
+import:
+    error:
+        see_more: En savoir plus
+        base: Une erreur est survenue
+        url:
+            not_db: Vous devez saisir une adresse depuis le site de Dofusbook
+            error: L'url renvoie une erreur 404, veuillez indiquer une adresse correcte
+            confidential: Chargement impossible, le personnage est confidentiel ou introuvable sur Dofusbook
+            invalid: L'adresse est invalide
+    success: Chargement terminé
+    form:
+        label: Depuis un personnage Dofus Book
+        placeholder: Url du personnage
+        submitbutton: Envoyer

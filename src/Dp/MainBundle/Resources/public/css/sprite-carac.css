@@ -1,0 +1,82 @@
+.sprite-carac{
+    background: url("icone/sprite.png") no-repeat;
+    vertical-align: -5px;
+}
+
+.sprite-vitalite{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -318px;
+}
+
+.sprite-pa{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -242px;
+}
+
+.sprite-pm{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -50px;
+}
+
+.sprite-initiative{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -204px;
+}
+
+.sprite-prospection{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -278px;
+}
+
+.sprite-po{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -127px;
+}
+
+.sprite-invocations{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -507px;
+}
+
+.sprite-sagesse{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -357px;
+}
+
+.sprite-intelligence{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -393px;
+}
+
+.sprite-force{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -431px;
+}
+
+.sprite-chance{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -88px;
+}
+
+.sprite-agilite{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -166px;
+}
+
+.sprite-cc{
+    width: 22px; 
+    height: 22px; 
+    background-position: -8px -588px;
+}
